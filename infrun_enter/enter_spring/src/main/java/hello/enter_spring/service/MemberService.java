@@ -3,6 +3,7 @@ package hello.enter_spring.service;
 import hello.enter_spring.domain.Member;
 import hello.enter_spring.repository.MemberRepository;
 import hello.enter_spring.repository.MemoryMemberRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
